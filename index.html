@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 1.5em;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.75em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 0.75em;
+            transition: background-color 0.3s;
+        }
+
+        .btn-facebook {
+            background-color: #3b5998;
+        }
+
+        .btn-facebook:hover {
+            background-color: #334d84;
+        }
+
+        .btn-google {
+            background-color: #db4437;
+        }
+
+        .btn-google:hover {
+            background-color: #c33c2c;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.75em;
+            margin-bottom: 0.75em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login to Save Your Progress</h1>
+        <p>Sign in to access your saved games and continue where you left off.</p>
+        <button class="btn btn-facebook" onclick="redirectTo('Facebook')">Continue with Facebook</button>
+        <button class="btn btn-google" onclick="redirectTo('Google')">Continue with Google</button>
+        <hr>
+        <form>
+            <input type="email" class="input-field" placeholder="Email" required>
+            <input type="password" class="input-field" placeholder="Password" required>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-secondary">Sign Up</button>
+        </form>
+    </div>
+    
+    <script>
+        function redirectTo(platform) {
+            alert(`You are being redirected to ${platform} for login...`);
+            // Here you would typically redirect the user to the actual OAuth URL for Facebook or Google
+            // For example: window.location.href = 'https://www.facebook.com/login.php' or window.location.href = 'https://accounts.google.com/signin';
+        }
+    </script>
+</body>
+</html>
